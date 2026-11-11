@@ -115,3 +115,32 @@ th {
 td {
     text-align: center;
 }
+<head>
+    <title>Le mie immagini</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Scegli un'immagine</h1>
+
+    <button onclick="cambiaImmagine('immagine1.jpg')">
+        Immagine 1
+    </button>
+
+    <button onclick="cambiaImmagine('immagine2.jpg')">
+        Immagine 2
+    </button>
+
+    <button onclick="cambiaImmagine('immagine3.jpg')">
+        Immagine 3
+    </button>
+
+    <br><br>
+
+    <img id="foto" src="immagine1.jpg" width="300">
+
+    <script>
+        function cambiaImmagine(immagine) {
+            document.getElementById("foto").src = immagine;
+        }
+    </script>
