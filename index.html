@@ -1,184 +1,148 @@
 <!DOCTYPE html>
-
 <html lang="it">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>La mia scheda personale</title>
 
     <link rel="stylesheet" href="style.css">
 
+    <!-- Stile CSS della tabella -->
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        caption {
+            font-weight: bold;
+            color: blue;
+        }
+
+        th {
+            background-color: yellow;
+        }
+
+        td {
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
 
     <!-- Intestazione della pagina -->
-
     <header>
-
         <h1>Mi presento!</h1>
-
         <p>La mia prima pagina con HTML e CSS</p>
-
     </header>
 
     <!-- Contenuto principale -->
-
     <main>
-
         <article class="scheda">
 
             <h2>Flavio Montalto</h2>
 
             <p class="descrizione">
-
                 Ciao! Sono Flavio, frequento un corso di informatica
-
                 e sto imparando a creare pagine web.
-
             </p>
 
             <h3>I miei interessi</h3>
-
             <ul>
-
                 <li>Programmazione</li>
-
                 <li>Musica</li>
-
                 <li>Sport</li>
-
             </ul>
 
             <h3>Ma anche:</h3>
-
             <ol>
-
                 <li>Videomaking</li>
-
                 <li>Games</li>
-
             </ol>
 
             <!-- Tabella dei miei interessi -->
-
             <h2>Le mie passioni</h2>
 
-            <table>
-
+            <table style="width:50%">
                 <caption>Le mie attività preferite</caption>
 
                 <tr>
-
                     <th>Interesse</th>
-
                     <th>Attività</th>
-
                     <th>Obiettivo</th>
-
                 </tr>
 
                 <tr>
-
                     <td>Programmazione</td>
-
                     <td>Creare pagine web</td>
-
                     <td>Realizzare un sito web</td>
-
                 </tr>
 
                 <tr>
-
                     <td>Videomaking</td>
-
                     <td>Montare video</td>
-
                     <td>Migliorare nel montaggio</td>
-
                 </tr>
 
                 <tr>
-
                     <td>Gaming</td>
-
                     <td>Giocare ai videogiochi</td>
-
                     <td>Divertirmi e migliorare</td>
-
                 </tr>
 
                 <tr>
-
                     <td>Sport</td>
-
                     <td>Allenarmi</td>
-
                     <td>Mantenermi in forma</td>
-
                 </tr>
-
             </table>
 
+            <!-- NUOVA SEZIONE CON 3 BOTTONI -->
+            <h2>Le mie immagini</h2>
+            <p>Clicca su un bottone per cambiare immagine!</p>
+
+            <button onclick="cambiaImmagine('immagine1.jpg')">
+                Immagine 1
+            </button>
+
+            <button onclick="cambiaImmagine('immagine2.jpg')">
+                Immagine 2
+            </button>
+
+            <button onclick="cambiaImmagine('immagine3.jpg')">
+                Immagine 3
+            </button>
+
+            <br><br>
+
+            <img id="foto" src="immagine1.jpg"
+                 alt="Le mie immagini" width="300">
+
             <p>
-
                 Il mio obiettivo è
-
                 <strong>creare il mio primo sito web</strong>.
-
             </p>
 
             <a class="pulsante" href="mailto:flavio@example.com">
-
                 Scrivimi
-
             </a>
 
         </article>
-
     </main>
 
     <!-- Piè di pagina -->
-
     <footer>
-
         <p>Esercitazione di laboratorio — HTML e CSS</p>
-
     </footer>
 
-</body>
-
-</html>
-<head>
-    <title>Le mie immagini</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-    <h1>Scegli un'immagine</h1>
-
-    <button onclick="cambiaImmagine('immagine1.jpg')">
-        Immagine 1
-    </button>
-
-    <button onclick="cambiaImmagine('immagine2.jpg')">
-        Immagine 2
-    </button>
-
-    <button onclick="cambiaImmagine('immagine3.jpg')">
-        Immagine 3
-    </button>
-
-    <br><br>
-
-    <img id="foto" src="immagine1.jpg" width="300">
-
+    <!-- JAVASCRIPT PER CAMBIARE IMMAGINE -->
     <script>
         function cambiaImmagine(immagine) {
             document.getElementById("foto").src = immagine;
         }
     </script>
+
+</body>
+</html>
